@@ -1,0 +1,63 @@
+.create-project-container{
+    width: 80%;
+    height:1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 200px;
+
+    .btn{
+        width: 120px;
+        height: 50px;
+        background-color: lightskyblue;
+        color: black;
+        font-size: 1em;
+        float:right;
+        margin-right: 22%;
+        box-shadow: 2px 3px 2px black;
+        border-radius: 15px;
+       
+    } 
+
+    h5{
+        color: darkslategray;
+        font-size: 2em;
+        padding: 10px 10px 10px;
+    }
+    .title{
+        color:darkslategray;
+        font-size: 2em;
+        padding: 10px 10px 10px;
+        margin-left: 10%;
+    }
+    input{
+        width: 50%;
+        height: 3em;
+        margin-left: 220px;
+        border:none;
+        border-bottom: 1px solid black;
+        
+    }
+    .project-content{
+        border: none;
+        color:darkslategray;
+        font-size: 2em;
+        padding: 10px 10px 10px;
+        margin-left: 10%;
+        .content-lable{
+            position: absolute;
+        }
+         
+        textarea{
+            margin-left: 280px;
+            width: 50%;
+            height: auto;
+            border: none;
+            border-bottom: 1px solid black;
+           
+        }
+        
+    }
+    
+       
+
+}

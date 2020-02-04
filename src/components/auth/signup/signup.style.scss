@@ -1,0 +1,47 @@
+.signin-container{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+
+    .white{
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 120px;
+        .submit-button{
+            float: right;
+            button {
+                width: 100px;
+                height: 50px;
+                background-color: blue;
+                font-size: 1em;
+                color: white;
+                border-color: blue;
+            }
+        }
+        .input-field{
+            display: block;
+        }
+        .signin{
+            font-weight: bolder;
+            color: black;
+            font-size: 3em;
+        }
+        
+            .input-field input{
+                width: 75%;
+                height: 50px;
+                margin-bottom: 20px;
+                border: none;
+                border-bottom: 1px solid grey;
+                margin-left: 2em;  
+                font-size: 1em;
+            }
+            .input-field label{
+                font-size: 2em;
+                display: block;
+            }
+        }
+        
+        
+}

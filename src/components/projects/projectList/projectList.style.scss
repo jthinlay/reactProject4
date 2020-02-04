@@ -1,0 +1,36 @@
+.project-list{
+    margin-left: 200px;
+    margin-right: auto;
+    width: 100%;
+    padding-left: 15%;
+    height: 100%;
+    margin-bottom: 100px;
+    margin-top: 20px;
+    
+    .project-card{
+        width: 60%;
+        background-color: white;
+       
+
+        .card-content{
+            width: 90%;
+            height: 100%;
+
+            .card-title{
+                color: black;
+                font-size: 3em;
+                font-weight:bolder;
+                padding: 10px 10px 10px;
+            }
+            p{
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                padding-left: 10px;
+            }
+            .projected-date{
+                color: lightslategray;
+                padding: 10px 10px 10px;
+            }
+        }
+    }
+
+}

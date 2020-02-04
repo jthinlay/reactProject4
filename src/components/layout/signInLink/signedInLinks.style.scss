@@ -1,0 +1,24 @@
+#right{
+    text-align: right;
+    padding: 0px;
+    margin: -50px;
+  
+    list-style: none;
+    justify-items: right;
+    li {
+        display:inline-block;
+        padding-left: 1em;
+        a{
+            color: white;
+            font-weight: bolder;
+        } 
+        .btn{
+            border-radius: 50%;
+            background-color: red;
+            color: white;
+            margin-left: 200px;
+        }    
+    }
+
+   
+}

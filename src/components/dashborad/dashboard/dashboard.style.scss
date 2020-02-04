@@ -1,0 +1,18 @@
+.dashboard{
+    width: 100%;
+    background-color: mediumaquamarine;
+    .row{
+        
+        width: 100%;
+
+        .col1{
+            width: 60%;
+            float: left;
+        }
+        .col2{
+            width:40%;
+            float: right;
+            margin-top: 20px;
+        }
+    }
+}
