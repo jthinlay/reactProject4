@@ -1,11 +1,11 @@
 import React from 'react'
 
-const ProjectSummary = () => {
+const ProjectSummary = ({project}) => {
     return(
         <div className="project-card">
             <div className="card-content">
-                <span className="card-title">Project Title</span>
-                <p>Project by the Dolma Group</p>
+                <span className="card-title">{project.title}</span>
+                <p>{project.content}</p>
                 <p className="projected-date"> 3rd February, 3pm </p>
             </div>
         </div>
