@@ -24,9 +24,13 @@ const ProjectDetails = (props) => {
     )
 }
 const mapStateToProps = (state, ownProps) => {
-   // const id = ownProps.props.match.params.id;
+    //console.log(state);
+    
+    const id = ownProps.match.params.id;
+    const projects = state.firestore.data.projects
+    const project = projects ? projects[id] : null
     return {
-
+        project: project
     }
 }
 export default compose(

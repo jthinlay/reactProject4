@@ -9,6 +9,7 @@ import {compose} from 'redux'
 class Dashboard extends React.Component{
     render(){
         const {projects} = this.props
+        
         return(
             <div className="dashboard">
                 <div className="row">
