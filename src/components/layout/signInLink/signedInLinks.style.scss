@@ -8,16 +8,19 @@
     li {
         display:inline-block;
         padding-left: 1em;
-        a{
+        button{
             color: white;
-            font-weight: bolder;
-        } 
+            font-size: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: black;
+        }
         .btn{
             border-radius: 50%;
             background-color: red;
             color: white;
             margin-left: 200px;
         }    
+
     }
 
    

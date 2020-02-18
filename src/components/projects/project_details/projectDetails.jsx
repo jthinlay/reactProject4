@@ -3,34 +3,49 @@ import './projectDetails.style.scss'
 import {connect} from 'react-redux'
 import {firestoreConnect} from 'react-redux-firebase'
 import {compose} from 'redux'
+import {Redirect} from 'react-router-dom'
+import moment from 'moment'
 
 const ProjectDetails = (props) => {
-    console.log(props)
+    //console.log('project details id props:', props)
+    
+    const {project, auth} = props
     const id = props.match.params.id;
-    return(
-        <div className="project-detail-container ">
-            <div className="project-detail-card">
-                <div className="project-detail-card-content">
-                    <span className="project-detail-title" > Project Detail Title - {id}</span>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in iaculis dui. In eu leo mattis, gravida augue eget, dignissim velit. Nunc volutpat enim vitae lorem laoreet tempus. Donec ullamcorper eleifend nunc sit amet scelerisque. Sed volutpat nunc at ipsum vestibulum, vel lacinia urna bibendum. Nullam et dui sit amet nulla lacinia vulputate. Pellentesque eget ante ut sapien congue semper eget sed lectus. Phasellus imperdiet accumsan mi commodo vehicula. Pellentesque lobortis pharetra ex, sed convallis felis vehicula eu. Nulla maximus nisl nibh, a ullamcorper ipsum consectetur id. Aenean malesuada dolor non ligula ultrices eleifend. Mauris sodales, mi et molestie molestie, lorem lorem cursus leo, eu porta purus nunc a metus. Nunc luctus ex sit amet cursus mattis. Aliquam nec pretium mi. </p>
-                </div>
-                <hr />
-                <div className="project-detail-card-action">
-                    <div>Posted by the Dolma group</div>
-                    <div>2nd September, 4pm</div>
+    if(!auth.uid) return < Redirect to='/signin' /> 
+        if(project){
+            return(
+                <div className="project-detail-container ">
+                <div className="project-detail-card">
+                    <div className="project-detail-card-content">
+                        <span className="project-detail-title" > {project.title} </span>
+                            <p>{project.content}</p>
+                    </div>
+                    <hr />
+                    <div className="project-detail-card-action">
+                        <div>Posted by {project.authorFirstName}{project.authorLastName}</div>
+                        <div>{moment(project.createdAt.toDate()).calendar()}</div>
+                    </div>   
                 </div>
             </div>
-        </div>
-    )
+            )
+        } else {
+            return(
+            <div className="project-detail-title">
+                 <h1>Loading project with this id:  {id};  however the content can't found...</h1>
+            </div>
+            )  
+        }        
 }
 const mapStateToProps = (state, ownProps) => {
-    //console.log(state);
-    
+   //console.log('state', state);
+
     const id = ownProps.match.params.id;
     const projects = state.firestore.data.projects
     const project = projects ? projects[id] : null
+    
     return {
-        project: project
+        project: project,
+        auth: state.firebase.auth
     }
 }
 export default compose(

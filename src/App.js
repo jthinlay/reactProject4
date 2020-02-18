@@ -9,7 +9,6 @@ import SignUp from './components/auth/signup/signup'
 import CreateProject from './components/projects/create_project/createProject'
 
 
-
 function App() {
   return (
     <div className="App">
@@ -21,6 +20,7 @@ function App() {
           <Route path="/signin" component={SignIn} />
           <Route path="/signup" component={SignUp} />
           <Route path="/create" component={CreateProject} />
+         
         </Switch>
       </BrowserRouter>
       
