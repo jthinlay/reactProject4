@@ -1,0 +1,16 @@
+.section{
+    border: 1px solid black;
+    width: 60%;
+    background-color: white;
+    padding: 30px 10px 10px;
+    padding-bottom: 20px;
+    font-size: 20px;
+        .card-title{
+            padding-left: 10%;
+            font-weight: bolder;
+            font-size: 23px;   
+        }
+        .notifications li{
+            list-style-type: none;
+        }
+}
