@@ -22,7 +22,7 @@ class CreateProject extends React.Component{
         this.props.history.push('/')
     }
     render(){
-        console.log('props:', this.props)
+        //console.log('props:', this.props)
         const {auth} = this.props
         if(!auth.uid) return <Redirect to='/signin' />
         return(

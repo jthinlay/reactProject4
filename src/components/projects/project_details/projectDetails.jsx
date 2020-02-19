@@ -7,7 +7,6 @@ import {Redirect} from 'react-router-dom'
 import moment from 'moment'
 
 const ProjectDetails = (props) => {
-    //console.log('project details id props:', props)
     
     const {project, auth} = props
     const id = props.match.params.id;
@@ -37,12 +36,10 @@ const ProjectDetails = (props) => {
         }        
 }
 const mapStateToProps = (state, ownProps) => {
-   //console.log('state', state);
-
-    const id = ownProps.match.params.id;
-    const projects = state.firestore.data.projects
-    const project = projects ? projects[id] : null
-    
+        
+        const id = ownProps.match.params.id;
+        const projects = state.firestore.data.project
+        const project = projects ? projects[id] : null
     return {
         project: project,
         auth: state.firebase.auth
